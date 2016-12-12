@@ -15,20 +15,20 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         let line = Line(point: [CGPoint(x: 0, y: 10), CGPoint(x: 10, y: 10)])
-        let redLine = ColorShapedDecorator(shape: Line(point: [CGPoint(x: 0, y: 10), CGPoint(x: 10, y: 10)]))
+        let coloredLine = ColorShapedDecorator(shape: Line(point: [CGPoint(x: 0, y: 10), CGPoint(x: 10, y: 10)]), color: "red")
 
-        let redRectangle = ColorShapedDecorator(shape: Rectangle(point: [CGPoint(x: 0, y: 0), CGPoint(x: 0, y: 4), CGPoint(x: 6, y: 0), CGPoint(x: 6, y: 4)]))
+        let coloredRectangle = ColorShapedDecorator(shape: Rectangle(point: [CGPoint(x: 0, y: 0), CGPoint(x: 0, y: 10), CGPoint(x: 20, y: 0), CGPoint(x: 20, y: 10)]), color: "blue")
         
         if line.validate(){
             line.draw()
         }
         
-        if redLine.validate(){
-            redLine.draw()
+        if coloredLine.validate(){
+            coloredLine.draw()
         }
         
-        if redRectangle.validate(){
-            redRectangle.draw()
+        if coloredRectangle.validate(){
+            coloredRectangle.draw()
         }
     }
 

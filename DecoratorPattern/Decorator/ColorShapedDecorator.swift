@@ -9,7 +9,9 @@
 import UIKit
 
 class ColorShapedDecorator: ShapeDecorator {
-    required init(shape: Shape) {
+    let color : String
+    init(shape: Shape, color: String) {
+        self.color = color
         super.init(shape: shape)
     }
     
@@ -23,6 +25,6 @@ class ColorShapedDecorator: ShapeDecorator {
     }
     
     func setBorderColor(){
-        print("border colored")
+        print("border colored \(self.color)")
     }
 }

@@ -12,7 +12,7 @@ class ShapeDecorator: Shape {
 
     let decoratedShape : Shape
     
-    required init(shape: Shape) {
+    init(shape: Shape) {
         self.decoratedShape = shape
     }
     
